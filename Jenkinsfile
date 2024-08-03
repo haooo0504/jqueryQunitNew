@@ -22,6 +22,11 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 script {
+                    // 安裝 Puppeteer 所需的依賴項
+                    sh '''
+                        apt-get update
+                        apt-get install -y libnss3
+                    '''
                     // 安裝 Puppeteer
                     sh 'npm install puppeteer'
                 }
