@@ -32,7 +32,7 @@ pipeline {
             steps {
                 script {
                     // 運行 Puppeteer 測試腳本
-                    sh 'node path/to/your/puppeteer_test.js'
+                    sh 'node html/test/runTest.js'
                 }
             }
         }
